@@ -9,7 +9,7 @@ import Footer from "./components/footer";
 
 function App() {
     return (
-        <section className="min-h-screen bg-[#F6F3F6]">
+        <section className="min-h-screen bg-[#F6F3F6] font-inter">
             <Navbar />
             <HeroSection />
             <BankingBasics />
