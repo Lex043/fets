@@ -12,7 +12,7 @@ export default function BankingBasics() {
             <div className="container mx-auto xl:flex xl:justify-between xl:items-center">
                 <div className="xl:w-[594px]">
                     <div className="text-center xl:text-justify text-[#14191F]">
-                        <h1 className="text-3xl font-semibold xl:text-[60px] xl:leading-[70px]">
+                        <h1 className="text-3xl font-semibold md:text-[60px] md:leading-[70px]">
                             Do More Today, With Fets
                         </h1>
                         <p className="opacity-[80%] pt-4 xl:pt-6 xl:w-[366px] font-medium text-[#14191FCC]">

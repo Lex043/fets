@@ -15,14 +15,13 @@ import Card from "./card";
 
 export default function Features() {
     return (
-        <section className="bg-white pt-10 pb-20 px-4 xl:px-24">
+        <section className="bg-white pt-10 pb-20 px-4 xl:px-28">
             <div className="container mx-auto">
-                <h1 className="text-center font-semibold text-3xl xl:text-[64px] xl:w-[768px] xl:mx-auto xl:leading-[72px] text-[#182700]">
+                <h1 className="text-center font-semibold text-3xl md:text-[64px] xl:w-[768px] xl:mx-auto md:leading-[72px] text-[#182700]">
                     Get the best experience with our features
                 </h1>
-                <section></section>
-                <div className="mt-20 flex flex-col xl:flex-row gap-6 xl:mt-[122px] ">
-                    <Card className="rounded-[20px]">
+                <div className="mt-20 flex flex-col lg:flex-row justify-center gap-6 xl:mt-[122px] ">
+                    <Card className="rounded-[20px] w-full">
                         <div className="pt-5 px-6 xl:pt-10 xl:px-11">
                             <div className="mb-6 flex justify-between items-center">
                                 <div className="rounded-full border border-[#1524001A] w-20 h-20 flex justify-center items-center">
@@ -36,31 +35,31 @@ export default function Features() {
                                     Send Cash
                                 </button>
                             </div>
-                            <h1 className="text-[#182700] text-xl xl:text-3xl">
+                            <h1 className="text-[#182700] font-semibold text-xl md:text-3xl">
                                 Sending Money Made Simple
                             </h1>
-                            <p className="pt-5 text-[#182700B8] font-medium">
+                            <p className="pt-5 text-[#182700B8] font-medium max-w-sm">
                                 Send money to loved ones or settle bills with
                                 ease. fets keeps you connected when it matters
                                 most.
                             </p>
                         </div>
-                        <div className="mt-6 px-6 xl:px-12 xl:mt-12 relative w-full">
+                        <div className="mt-6 px-6 xl:px-12 xl:mt-12 relative">
                             <img
                                 src={walletTowallet}
                                 alt="wallet to wallet illustration"
-                                className="w-64 relative"
+                                className="w-64 md:w-[414px] relative mx-auto"
                             />
-                            <div className="absolute top-5 right-4">
+                            <div className="absolute top-5 right-4 ">
                                 <img
                                     src={tt}
                                     alt="wallet to wallet illustration"
-                                    className="w-52 h-auto"
+                                    className="w-52 md:w-[273px] h-auto"
                                 />
                             </div>
                         </div>
                     </Card>
-                    <Card className="rounded-[20px]">
+                    <Card className="rounded-[20px] w-full">
                         <div className="pt-5 px-6 xl:pt-10 xl:px-11">
                             <div className="mb-6 flex justify-between items-center">
                                 <div className="rounded-full border border-[#1524001A] w-20 h-20 flex justify-center items-center">
@@ -70,20 +69,24 @@ export default function Features() {
                                     Buy Airtime
                                 </button>
                             </div>
-                            <h1 className="text-[#182700] text-xl xl:text-3xl">
+                            <h1 className="text-[#182700] font-semibold text-xl md:text-3xl">
                                 Airtime Top-Up In Seconds
                             </h1>
-                            <p className="pt-5 text-[#182700B8] font-medium">
+                            <p className="pt-5 text-[#182700B8] font-medium max-w-sm">
                                 Top up your airtime in a flash and enjoy more
                                 quality time with friends.
                             </p>
                         </div>
                         <div className="mt-6 px-6 xl:px-12 xl:mt-12">
-                            <img src={topup} alt="topup illustration" />
+                            <img
+                                src={topup}
+                                alt="topup illustration"
+                                className="md:w-[500px] h-auto mx-auto"
+                            />
                         </div>
                     </Card>
                 </div>
-                <Card className="mt-6 xl:flex px-7 py-5 xl:px-14">
+                <Card className="mt-6 lg:flex px-7 py-5 xl:px-14">
                     <div>
                         <div className="rounded-full border border-[#1524001A] w-20 h-20 flex justify-center items-center">
                             <img
@@ -114,7 +117,7 @@ export default function Features() {
                     <section className="relative mt-40 md:mt-52 w-[14.5rem] md:w-[50%] mx-auto">
                         <div
                             className="bg-white p-3 md:p-4 rounded-lg md:rounded-2xl w-fit absolute right-[6.5rem] 
-                    bottom-[6.8rem] md:bottom-44 md:right-32"
+                            bottom-[6.8rem] md:bottom-44 md:right-32"
                         >
                             <img
                                 src={profile1}
