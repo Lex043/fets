@@ -24,7 +24,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <Menu size={30} className="lg:hidden" />
-                <button className="border-2 border-[#14191F0F] text-lg font-semibold flex gap-2 text-[#182700] py-4 px-6 rounded-full">
+                <button className="border-2 hidden border-[#14191F0F] text-lg font-semibold lg:flex gap-2 text-[#182700] py-4 px-6 rounded-full">
                     Log in
                     <UserRound />
                 </button>
