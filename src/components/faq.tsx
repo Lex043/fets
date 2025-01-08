@@ -3,6 +3,7 @@ import googlePlay from "../assets/google-play.svg";
 import appleStore from "../assets/apple-store.svg";
 import faq1 from "../assets/faq1.svg";
 import faq2 from "../assets/faq2.svg";
+import borderBottom from "../assets/underline.svg";
 
 export default function Faq() {
     return (
@@ -10,7 +11,15 @@ export default function Faq() {
             <div className="flex flex-col gap-10 xl:flex-row xl:justify-between xl:items-center">
                 <div>
                     <h1 className="text-[#182700] font-semibold text-3xl md:text-[56px] md:leading-[66px] xl:text-start max-w-lg mx-auto xl:mx-0 text-center">
-                        Get Things Running in 3 Easy Steps
+                        Get Things Running in{" "}
+                        <span className="inline-flex flex-col items-center">
+                            3 Easy Steps
+                            <img
+                                src={borderBottom}
+                                alt="border bottom illustration"
+                                className="w-full max-w-[296px] h-full"
+                            />
+                        </span>
                     </h1>
                     <div className="mt-6 flex flex-col items-center xl:items-start gap-1">
                         <div className="flex gap-2 items-center">

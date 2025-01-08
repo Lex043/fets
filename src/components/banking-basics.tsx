@@ -5,6 +5,7 @@ import { PiScrollFill } from "react-icons/pi";
 import { RiSmartphoneFill } from "react-icons/ri";
 import centerLogo from "../assets/center-logo.svg";
 import Card from "./card";
+import borderBottom from "../assets/underline.svg";
 
 export default function BankingBasics() {
     return (
@@ -13,7 +14,16 @@ export default function BankingBasics() {
                 <div className="xl:w-[594px]">
                     <div className="text-center xl:text-justify text-[#14191F]">
                         <h1 className="text-3xl font-semibold md:text-[60px] md:leading-[70px]">
-                            Do More Today, With Fets
+                            Do More Today, <br className="hidden xl:block" />{" "}
+                            With
+                            <span className="inline-flex flex-col items-center">
+                                Fets
+                                <img
+                                    src={borderBottom}
+                                    alt="border bottom illustration"
+                                    className="w-40 h-full"
+                                />
+                            </span>
                         </h1>
                         <p className="opacity-[80%] pt-4 xl:pt-6 xl:w-[366px] font-medium text-[#14191FCC]">
                             Have fun. We&apos;ll take care of the rest!. Get

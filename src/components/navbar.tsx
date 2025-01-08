@@ -8,7 +8,7 @@ export default function Navbar() {
         <section className="p-4 lg:px-10 lg:py-9 xl:px-20 bg-white">
             <nav className="container mx-auto flex justify-between items-center">
                 <div className="flex gap-24">
-                    <div className="w-[93px] h-10">
+                    <div className="w-[93px] h-10 cursor-pointer">
                         <img src={logo} alt="logo" className="w-full h-full" />
                     </div>
                     <div className="hidden lg:flex items-center gap-12 text-[#182700] text-lg font-medium">

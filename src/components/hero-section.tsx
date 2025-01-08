@@ -4,14 +4,25 @@ import heroImage from "../assets/hero-image.svg";
 import cbn from "../assets/cbn.svg";
 import ndic from "../assets/ndic.svg";
 import walletId from "../assets/wallet-id.svg";
+import borderBottom from "../assets/underline.svg";
 
 export default function HeroSection() {
     return (
         <section className="px-4 xl:pl-24 bg-[url('/backgroundDesign.svg')] bg-cover bg-center bg-no-repeat xl:flex xl:justify-between container mx-auto">
             <div className="pt-14">
                 <h1 className="text-[#182700] xl:leading-[90px] text-center xl:text-left font-semibold text-5xl xl:w-[565px] md:text-[80px]">
-                    The <span>Simplified</span> Payment Experience
+                    The{" "}
+                    <span className="inline-flex flex-col items-center">
+                        Simplified
+                        <img
+                            src={borderBottom}
+                            alt="border bottom illustration"
+                            className="w-full h-full"
+                        />
+                    </span>
+                    Payment Experience
                 </h1>
+
                 <div className="mt-7 md:w-[422px] md:mx-auto xl:mx-0">
                     <p className="text-[#14191FE0] text-center xl:text-left font-bold">
                         Stress less, spend smarter, and enjoy seamless

@@ -20,7 +20,7 @@ export default function Features() {
                 <h1 className="text-center font-semibold text-3xl md:text-[64px] xl:w-[768px] xl:mx-auto md:leading-[72px] text-[#182700]">
                     Get the best experience with our features
                 </h1>
-                <div className="mt-20 flex flex-col lg:flex-row justify-center gap-6 xl:mt-[122px] ">
+                <div className="mt-20 flex flex-col lg:flex-row justify-between gap-6 xl:mt-[122px] ">
                     <Card className="rounded-[20px] w-full">
                         <div className="pt-5 px-6 xl:pt-10 xl:px-11">
                             <div className="mb-6 flex justify-between items-center">
@@ -114,10 +114,10 @@ export default function Features() {
                             </button>
                         </div>
                     </div>
-                    <section className="relative mt-40 md:mt-52 w-[14.5rem] md:w-[50%] mx-auto">
+                    <section className="relative mt-40 md:mt-52 w-[14.5rem] md:w-[50%] xl:max-w-md lg:mt-0 mx-auto lg:mx-0">
                         <div
                             className="bg-white p-3 md:p-4 rounded-lg md:rounded-2xl w-fit absolute right-[6.5rem] 
-                            bottom-[6.8rem] md:bottom-44 md:right-32"
+                            bottom-[6.8rem] md:bottom-44 md:right-32 lg:right-28 lg:bottom-60 xl:bottom-72 xl:right-[14.5rem]"
                         >
                             <img
                                 src={profile1}
@@ -125,28 +125,28 @@ export default function Features() {
                                 className="w-5 h-5 md:w-10 md:h-10"
                             />
                         </div>
-                        <div className="bg-white p-3 md:p-4 rounded-lg md:rounded-2xl w-fit absolute right-14 bottom-10">
+                        <div className="bg-white p-3 md:p-4 rounded-lg md:rounded-2xl w-fit absolute right-14 bottom-10 lg:bottom-36 lg:right-10 xl:right-40">
                             <img
                                 src={profile2}
                                 alt="profile illustration"
                                 className="w-5 h-5 md:w-10 md:h-10"
                             />
                         </div>
-                        <div className="absolute bottom-11 left-1 md:bottom-[4.5rem]">
+                        <div className="absolute bottom-11 left-1 md:bottom-[4.5rem] lg:bottom-32 xl:bottom-44">
                             <img
                                 src={posArrow2}
                                 alt="pos arrow illustration"
                                 className="w-20 md:w-full h-full"
                             />
                         </div>
-                        <div className="absolute left-12 bottom-6 md:left-[4.5rem]">
+                        <div className="absolute left-12 bottom-6 md:left-[4.5rem] lg:bottom-32">
                             <img
                                 src={posArrow1}
                                 alt="pos arrow illustration"
                                 className="w-20 md:w-full h-full"
                             />
                         </div>
-                        <div className="bg-white p-3 md:p-4 rounded-lg md:rounded-2xl w-fit">
+                        <div className="bg-white p-3 md:p-4 rounded-lg md:rounded-2xl w-fit lg:bottom-28 lg:absolute">
                             <img
                                 src={profile3}
                                 alt="pos illustration"
@@ -159,7 +159,7 @@ export default function Features() {
                         <img
                             src={agent}
                             alt="pos illustration"
-                            className="w-full h-full"
+                            className="w-full md:w-[371px] md:mx-auto lg:mx-0 h-full"
                         />
                     </div>
                 </Card>
