@@ -5,6 +5,33 @@ import huawei from "../assets/huawei.svg";
 import jumia from "../assets/jumia.svg";
 import miniso from "../assets/miniso.svg";
 
+const ourPartners = [
+    {
+        description: "kfc illustration",
+        image: kfc,
+    },
+    {
+        description: "fanmilk illustration",
+        image: fanmilk,
+    },
+    {
+        description: "ibdc illustration",
+        image: ibdc,
+    },
+    {
+        description: "huawei illustration",
+        image: huawei,
+    },
+    {
+        description: "jumia illustration",
+        image: jumia,
+    },
+    {
+        description: "miniso illustration",
+        image: miniso,
+    },
+];
+
 export default function OurPartners() {
     return (
         <section className="bg-[#85C2270D] pt-10 xl:pt-11 pb-20 px-4 xl:px-24 xl:pb-28">
@@ -13,36 +40,14 @@ export default function OurPartners() {
                     Our Partners
                 </h1>
                 <div className="flex flex-wrap justify-center items-center gap-6 xl:gap-16 mt-10 xl:mt-14">
-                    <img
-                        src={kfc}
-                        alt="kfc illustration"
-                        className="w-20 xl:w-[155px] bg-inherit h-full opacity-[30%]"
-                    />
-                    <img
-                        src={fanmilk}
-                        alt="fanmilk illustration"
-                        className="w-20 xl:w-[155px] bg-inherit h-full opacity-[30%]"
-                    />
-                    <img
-                        src={ibdc}
-                        alt="ibdc illustration"
-                        className="w-20 xl:w-[155px] bg-inherit h-full opacity-[30%]"
-                    />
-                    <img
-                        src={huawei}
-                        alt="huawei illustration"
-                        className="w-20 xl:w-[155px] bg-inherit h-full opacity-[30%]"
-                    />
-                    <img
-                        src={jumia}
-                        alt="jumia illustration"
-                        className="w-20 xl:w-[155px] bg-inherit h-full opacity-[30%]"
-                    />
-                    <img
-                        src={miniso}
-                        alt="miniso illustration"
-                        className="w-20 xl:w-[155px] bg-inherit h-full opacity-[30%]"
-                    />
+                    {ourPartners.map((partner) => (
+                        <img
+                            key={partner.description}
+                            src={partner.image}
+                            alt={partner.description}
+                            className="w-20 xl:w-[155px] bg-inherit h-full opacity-[30%]"
+                        />
+                    ))}
                 </div>
             </div>
         </section>

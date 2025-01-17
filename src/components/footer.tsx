@@ -3,6 +3,78 @@ import { MdOutlineFacebook } from "react-icons/md";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
+
+const footer = [
+    {
+        title: "Quick Links",
+        list: [
+            {
+                name: "Home",
+            },
+            {
+                name: "Product & Services",
+            },
+            {
+                name: "Press Release",
+            },
+            {
+                name: "FAQ",
+            },
+        ],
+    },
+    {
+        title: "Information",
+        list: [
+            {
+                name: "About Us",
+            },
+            {
+                name: "Airtime Top-up",
+            },
+            {
+                name: "Pay Bills",
+            },
+            {
+                name: "Send/Receive Cash",
+            },
+        ],
+    },
+    {
+        title: "Services",
+        list: [
+            {
+                name: "Corperate",
+            },
+            {
+                name: "Retail",
+            },
+            {
+                name: "Fets PTSP",
+            },
+        ],
+    },
+    {
+        title: "Policies",
+        list: [
+            {
+                name: "Policy",
+            },
+            {
+                name: "Terms",
+            },
+            {
+                name: "Privacy Policy",
+            },
+            {
+                name: "Quality Policy",
+            },
+            {
+                name: "ISMS Policy",
+            },
+        ],
+    },
+];
+
 export default function Footer() {
     return (
         <footer className="bg-[#531F55] px-4 pt-16 pb-10 xl:px-[107px] xl:pt-[232px] xl:pb-[106px]">
@@ -21,47 +93,27 @@ export default function Footer() {
                         <FaTwitter size={32} fill="#FFFFFF" />
                     </div>
                 </div>
+
                 <div className="mt-10 flex flex-col gap-7 md:flex-row md:flex-wrap">
-                    <div className="border-r border-[#FFFFFF14] pr-6">
-                        <h1 className="text-white font-semibold">
-                            Quick Links
-                        </h1>
-                        <ul className="text-[#FFFFFFB8] pt-8 space-y-3">
-                            <li>Home</li>
-                            <li>Product & Services</li>
-                            <li>Press Release</li>
-                            <li>FAQ</li>
-                        </ul>
-                    </div>
-                    <div className="border-r border-[#FFFFFF14] pr-6">
-                        <h1 className="text-white font-semibold">
-                            Information
-                        </h1>
-                        <ul className="text-[#FFFFFFB8] pt-8 space-y-3">
-                            <li>About Us</li>
-                            <li>Airtime Top-up</li>
-                            <li>Pay Bills</li>
-                            <li>Send/Receive Cash</li>
-                        </ul>
-                    </div>
-                    <div className="border-r border-[#FFFFFF14] pr-6">
-                        <h1 className="text-white font-semibold">Services</h1>
-                        <ul className="text-[#FFFFFFB8] pt-8 space-y-3">
-                            <li>Corperate</li>
-                            <li>Retail</li>
-                            <li>Fets PTSP</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h1 className="text-white font-semibold">Policies</h1>
-                        <ul className="text-[#FFFFFFB8] pt-8 space-y-3">
-                            <li>Policy</li>
-                            <li>Terms</li>
-                            <li>Privacy Policy</li>
-                            <li>Quality Policy</li>
-                            <li>ISMS Policy</li>
-                        </ul>
-                    </div>
+                    {footer.map((item) => (
+                        <div
+                            key={item.title}
+                            className={`${
+                                item.title === "Policies"
+                                    ? "border-0"
+                                    : "md:border-r"
+                            } border-[#FFFFFF14] pr-6`}
+                        >
+                            <h1 className="text-white font-semibold">
+                                {item.title}
+                            </h1>
+                            <ul className="text-[#FFFFFFB8] pt-8 space-y-3">
+                                {item.list.map((i) => (
+                                    <li>{i.name}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
             </section>
         </footer>
