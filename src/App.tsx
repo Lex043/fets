@@ -6,18 +6,21 @@ import Faq from "./components/faq";
 import Testimonials from "./components/testimonials";
 import OurPartners from "./components/our-partners";
 import Footer from "./components/footer";
+import SmoothScroll from "./components/smooth-scroll";
 
 function App() {
     return (
         <section className="min-h-screen bg-[#F6F3F6] font-inter">
-            <Navbar />
-            <HeroSection />
-            <BankingBasics />
-            <Features />
-            <Testimonials />
-            <Faq />
-            <OurPartners />
-            <Footer />
+            <SmoothScroll>
+                <Navbar />
+                <HeroSection />
+                <BankingBasics />
+                <Features />
+                <Testimonials />
+                <Faq />
+                <OurPartners />
+                <Footer />
+            </SmoothScroll>
         </section>
     );
 }
