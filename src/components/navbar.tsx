@@ -18,15 +18,29 @@ export default function Navbar() {
 
                     {/* desktop navbar */}
                     <div className="hidden md:flex items-center gap-6 lg:gap-12 text-[#182700] text-lg font-medium">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a className="flex items-center" href="#">
-                            Product&Services{" "}
-                            <span>
-                                <ChevronDown />
-                            </span>
-                        </a>
-                        <a href="#">Contact</a>
+                        <div className="relative">
+                            <a className="under" href="#">
+                                Home
+                            </a>
+                        </div>
+                        <div className="relative">
+                            <a className="under" href="#">
+                                About
+                            </a>
+                        </div>
+                        <div className="relative">
+                            <a className="flex items-center under" href="#">
+                                Product&Services{" "}
+                                <span>
+                                    <ChevronDown />
+                                </span>
+                            </a>
+                        </div>
+                        <div className="relative">
+                            <a className="under" href="#">
+                                Contact
+                            </a>
+                        </div>
                     </div>
                 </div>
                 {/* mobile navbar */}

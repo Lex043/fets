@@ -109,7 +109,11 @@ export default function Footer() {
                             </h1>
                             <ul className="text-[#FFFFFFB8] pt-8 space-y-3">
                                 {item.list.map((i) => (
-                                    <li>{i.name}</li>
+                                    <div className="relative w-fit cursor-pointer">
+                                        <li className="footer-under">
+                                            {i.name}
+                                        </li>
+                                    </div>
                                 ))}
                             </ul>
                         </div>
