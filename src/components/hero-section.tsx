@@ -32,12 +32,12 @@ export default function HeroSection() {
                         <img
                             src={googlePlay}
                             alt="google playstore illustration"
-                            className="w-48 h-full"
+                            className="w-48 h-full cursor-pointer"
                         />
                         <img
                             src={appleStore}
                             alt="apple store illustration"
-                            className="w-48 h-full"
+                            className="w-48 h-full cursor-pointer"
                         />
                     </div>
                 </div>

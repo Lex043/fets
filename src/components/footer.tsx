@@ -104,7 +104,7 @@ export default function Footer() {
                                     : "md:border-r"
                             } border-[#FFFFFF14] pr-6`}
                         >
-                            <h1 className="text-white font-semibold">
+                            <h1 className="text-white cursor-pointer font-semibold">
                                 {item.title}
                             </h1>
                             <ul className="text-[#FFFFFFB8] pt-8 space-y-3">
