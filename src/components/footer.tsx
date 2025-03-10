@@ -3,6 +3,11 @@ import { MdOutlineFacebook } from "react-icons/md";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const footer = [
     {
@@ -76,8 +81,26 @@ const footer = [
 ];
 
 export default function Footer() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    useGSAP(() => {
+        if (sectionRef.current) {
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 70%",
+                    end: "bottom",
+                },
+                ease: "power1.out",
+                duration: 0.75
+            });
+
+            timeline
+                .from(sectionRef.current?.querySelectorAll(".subtitle"), { y: 50, opacity: 0 })
+
+        }
+    }, []);
     return (
-        <footer className="bg-[#531F55] px-4 pt-16 pb-10 xl:px-[107px] xl:pt-[232px] xl:pb-[106px]">
+        <footer ref={sectionRef} className="bg-[#531F55] px-4 pt-16 pb-10 xl:px-[107px] xl:pt-[232px] xl:pb-[106px]">
             <section className="container mx-auto border flex flex-col lg:flex-row justify-between border-[#FFFFFF29] rounded-2xl px-5 pb-4 xl:pb-10 pt-7 md:pt-14 md:px-10">
                 <div>
                     <div className="w-[93px] h-10">
@@ -109,8 +132,8 @@ export default function Footer() {
                             </h1>
                             <ul className="text-[#FFFFFFB8] pt-8 space-y-3">
                                 {item.list.map((i) => (
-                                    <div className="relative w-fit cursor-pointer">
-                                        <li className="footer-under">
+                                    <div className="relative overflow-hidden w-fit cursor-pointer">
+                                        <li className="footer-under subtitle">
                                             {i.name}
                                         </li>
                                     </div>

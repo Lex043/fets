@@ -12,12 +12,37 @@ import walletTowallet from "../assets/wallet1.svg";
 import topup from "../assets/topup.svg";
 import tt from "../assets/tt.svg";
 import Card from "./card";
+import SplitType from 'split-type'
+import gsap from "gsap";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Features() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    useGSAP(() => {
+        if (sectionRef.current) {
+            const split = new SplitType('.split', { types: 'words,chars,lines' });
+
+            gsap.from(split.lines, {
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: 'top 70%',
+                    end: 'bottom',
+                },
+                opacity: 0,
+                y: 100,
+                duration: 0.7
+            });
+        }
+
+    }, []);
+
     return (
-        <section className="bg-white pt-10 pb-20 px-4 xl:px-28">
+        <section ref={sectionRef} className="bg-white pt-10 pb-20 px-4 xl:px-28">
             <div className="container mx-auto">
-                <h1 className="text-center font-semibold text-3xl md:text-[64px] xl:w-[768px] xl:mx-auto md:leading-[72px] text-[#182700]">
+                <h1 className="split overflow-hidden text-center font-semibold text-3xl md:text-[64px] xl:w-[768px] xl:mx-auto md:leading-[72px] text-[#182700]">
                     Get the best experience with our features
                 </h1>
                 <div className="mt-20 flex flex-col lg:flex-row justify-between gap-6 xl:mt-[122px] ">

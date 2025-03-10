@@ -6,14 +6,40 @@ import { RiSmartphoneFill } from "react-icons/ri";
 import centerLogo from "../assets/center-logo.svg";
 import Card from "./card";
 import borderBottom from "../assets/underline.svg";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function BankingBasics() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useGSAP(() => {
+        if (sectionRef.current) {
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 100%",
+                    end: "bottom top",
+                },
+                ease: "power1.out",
+                duration: 0.75
+            });
+
+            timeline
+                .from(sectionRef.current?.querySelector(".title"), { y: 100, opacity: 0 })
+                .from(sectionRef.current?.querySelector(".subtitle"), { y: 100, opacity: 0 })
+                .from(sectionRef.current?.querySelector(".btn"), { y: 100, opacity: 0 });
+
+        }
+    }, []);
     return (
-        <section className="bg-white px-4 xl:px-24 py-10 xl:py-14">
+        <section ref={sectionRef} className="bg-white px-4 xl:px-24 py-10 xl:py-14">
             <div className="container mx-auto xl:flex xl:justify-between xl:items-center">
-                <div className="xl:w-[594px]">
-                    <div className="text-center xl:text-justify text-[#14191F]">
-                        <h1 className="text-3xl font-semibold md:text-[60px] md:leading-[70px]">
+                <div className="xl:w-[594px] overflow-hidden">
+                    <div className="text-center overflow-hidden xl:text-justify text-[#14191F]">
+                        <h1 className="title text-3xl font-semibold md:text-[60px] md:leading-[70px]">
                             Do More Today, <br className="hidden xl:block" />{" "}
                             With
                             <span className="inline-flex flex-col items-center">
@@ -25,12 +51,12 @@ export default function BankingBasics() {
                                 />
                             </span>
                         </h1>
-                        <p className="opacity-[80%] pt-4 xl:pt-6 xl:w-[366px] font-medium text-[#14191FCC]">
+                        <p className="subtitle opacity-[80%] pt-4 xl:pt-6 xl:w-[366px] font-medium text-[#14191FCC]">
                             Have fun. We&apos;ll take care of the rest!. Get
                             started today!
                         </p>
                     </div>
-                    <button className="mt-6 xl:mt-12 bg-[#85C227] text-white font-semibold py-5 px-7 mx-auto xl:mx-0 rounded-full flex items-center gap-3">
+                    <button className="btn mt-6 xl:mt-12 bg-[#85C227] text-white font-semibold py-5 px-7 mx-auto xl:mx-0 rounded-full flex items-center gap-3">
                         Get Started
                         <span className="bg-white rounded-full flex items-center justify-center w-9 h-9">
                             <MoveRight color="#85C227" className="w-5 h-5" />

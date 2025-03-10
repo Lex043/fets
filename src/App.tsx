@@ -7,6 +7,8 @@ import Testimonials from "./components/testimonials";
 import OurPartners from "./components/our-partners";
 import Footer from "./components/footer";
 import SmoothScroll from "./components/smooth-scroll";
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
 
 function App() {
     return (
