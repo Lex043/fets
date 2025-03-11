@@ -3,10 +3,34 @@ import havirok from "../assets/havirok.svg";
 import profile from "../assets/profile.svg";
 import { PiArrowUpRightFill } from "react-icons/pi";
 import { PiArrowDownLeftFill } from "react-icons/pi";
+import SplitType from 'split-type'
+import gsap from "gsap";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Testimonials() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    useGSAP(() => {
+        if (sectionRef.current) {
+            const split = new SplitType('.split-paragraph', { types: 'words' });
+
+            gsap.from(split.words, {
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: 'top 300%',
+                    end: 'bottom',
+                    scrub: true,
+                },
+                opacity: 0.2,
+                stagger: 0.1
+            });
+        }
+
+    }, []);
     return (
-        <section className="px-4 pt-10 xl:px-[121px] xl:pt-[70px] flex flex-col gap-6 container mx-auto xl:flex-row xl:justify-center">
+        <section ref={sectionRef} className="px-4 pt-10 xl:px-[121px] xl:pt-[70px] flex flex-col gap-6 container mx-auto xl:flex-row xl:justify-center">
             <Card className="rounded-[18px] px-14 py-20 bg-[#18270014]">
                 <img
                     src={havirok}
@@ -15,7 +39,7 @@ export default function Testimonials() {
                 />
             </Card>
             <Card className="rounded-[18px] px-6 md:px-12 pt-12 pb-7 bg-[#531F55] xl:w-[877px]">
-                <p className="italic text-white md:text-xl">
+                <p className="split-paragraph italic text-white md:text-xl">
                     I have been a fets Agent in Asaba, Delta State since 2019. I
                     started with one POS location but I have increased to 5
                     locations all using fets because for their top-notch
